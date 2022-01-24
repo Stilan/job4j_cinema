@@ -34,7 +34,6 @@ public class HallServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-
         Account account = null;
         int idAcc = 0;
         try {
