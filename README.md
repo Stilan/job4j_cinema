@@ -6,8 +6,4 @@
 
 ![ScreenShot](images/snapshot1.png)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 6d146f3 (2. Сервис - Кинотеатр [#3236])
 ![ScreenShot](images/snapshot2.png)

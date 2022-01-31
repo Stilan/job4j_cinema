@@ -11,7 +11,7 @@
 
     <title>Hello, world!</title>
 </head>
-</body>
+<body>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -24,32 +24,8 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
-<script>
-    $(document).ready(function () {
-        $.ajax({
-            type: 'GET',
-            url: 'http://localhost:8080/job4j_cinema_war_exploded/hall.do',
-            dataType: 'json'
-        }).done(function (data) {
-            for (var ticket of data) {
-                let row = ticket.row.toString();
-                let cell = ticket.cell.toString();
-                $('input[name="place"]').show().filter(function () {
-                    return $(this).attr('value').endsWith(row + cell);
-                }).parents('td').replaceWith('<td>Занято</td>')
-            }
-        })
-    });
-    function Button() {
-        let namePlace = $('input[name=place]:checked');
-        if (namePlace.length < 1) {
-            alert("Выберите места")
-            return false;
-        }
-        let row = Math.floor(namePlace.val() / 10);
-        let cell = namePlace.val() % 10;
-        window.location.href = `http://localhost:8080/job4j_cinema_war_exploded/payment.html?row=${row}&cell=${cell}`;
-    }
+<script src="js.js">
+
 </script>
 <body>
 <div class="container">
